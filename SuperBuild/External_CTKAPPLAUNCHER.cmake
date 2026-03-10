@@ -40,8 +40,8 @@ if(Slicer_USE_CTKAPPLAUNCHER)
     set(CTKAppLauncherFileName CTKAppLauncher-${launcher_version}-${CTKAPPLAUNCHER_OS}-${CTKAPPLAUNCHER_ARCHITECTURE}.tar.gz)
     ExternalProject_Add(${proj}
       ${${proj}_EP_ARGS}
-      URL https://github.com/commontk/AppLauncher/releases/download/v${launcher_version}/${CTKAppLauncherFileName}
-      URL_HASH SHA256=${sha256}
+      GIT_REPOSITORY "https://github.com/commontk/AppLauncher.git"
+      GIT_TAG "v0.1.10"
       DOWNLOAD_DIR ${CMAKE_BINARY_DIR}
       SOURCE_DIR ${EP_BINARY_DIR}
       BUILD_IN_SOURCE 1
